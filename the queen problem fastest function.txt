@@ -1,0 +1,9 @@
+if (row != upperlim){
+	long pos = upperlim & ~(row | ld | rd);
+	while (pos){
+		long p = pos & -pos;
+		pos -= p;
+		test(row + p, (ld + p) << 1, (rd + p) >> 1);
+	}
+}
+else sum++;
